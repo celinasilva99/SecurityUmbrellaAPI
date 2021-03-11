@@ -15,10 +15,10 @@ import env
 
 inv_url = env.UMBRELLA.get("inv_url")
 inv_token = env.UMBRELLA.get("inv_token")
-domain = "internetbadguys.com"
+domain = "www.google.com"
 
 url = f"{inv_url}/domains/categorization/{domain}?showLabels"
-headers = {"Authorization": f'Bearer {api_key}'}
+headers = {"Authorization": f'Bearer {inv_token}'}
 response = requests.get(url, headers=headers)
 response.raise_for_status()
 
